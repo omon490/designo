@@ -1,0 +1,30 @@
+
+.site-heading {
+  padding: 64px 0;
+}
+
+.site-heading__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-heading--open .site-nav__toggler {
+  background-image: url("../../img/hamburger-close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.site-heading--open .site-nav {
+  display: flex;
+}
+
+.site-heading--open .site-nav__link {
+  font-size: 16px;
+  color: $light-grey;
+}
+
+.site-heading--open .site-nav__item {
+  margin-bottom: 10%;
+}
