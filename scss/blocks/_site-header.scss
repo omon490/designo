@@ -1,6 +1,12 @@
 
 .site-heading {
   padding: 64px 0;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $white;
 }
 
 .site-heading__wrapper {
@@ -22,9 +28,26 @@
 
 .site-heading--open .site-nav__link {
   font-size: 16px;
-  color: $light-grey;
 }
 
 .site-heading--open .site-nav__item {
   margin-bottom: 10%;
+}
+
+@include breakpoint-down (560) {
+  .site-heading--open .site-nav::before {
+    animation-name: slide-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .site-heading--open .site-nav__list {
+    animation-name: slide-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
 }

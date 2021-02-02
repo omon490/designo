@@ -416,6 +416,12 @@ img {
 
 .site-heading {
   padding: 64px 0;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .site-heading__wrapper {
@@ -445,11 +451,37 @@ img {
 
 .site-heading--open .site-nav__link {
   font-size: 16px;
-  color: #f1f3f5db;
 }
 
 .site-heading--open .site-nav__item {
   margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 560px) {
+  .site-heading--open .site-nav::before {
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .site-heading--open .site-nav__list {
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
 }
 
 .site-nav__list {
@@ -543,7 +575,7 @@ img {
     right: 0;
     width: 68%;
     height: 100%;
-    background-color: #2C6269;
+    background-color: #E7816B;
   }
   .site-nav__list {
     -webkit-box-orient: vertical;
@@ -569,5 +601,27 @@ img {
 
 .logo__img {
   display: block;
+}
+
+@-webkit-keyframes slide-in {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
