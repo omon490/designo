@@ -1,0 +1,42 @@
+
+.intro {
+}
+
+.intro__wrapper {
+  padding-top: 145px;
+  padding-bottom: 145px;
+  padding-left: 95px;
+  padding-right: 95px;
+  border-radius: 10px;
+  background-color: $peach;
+  background-image: url("../../img/oval/Oval.png"),
+                    url("../../img/intro-img/into-img.png");
+  background-repeat: no-repeat;
+  background-size: 640px 640px, contain;
+  background-position: right center, calc(50% + 350px) calc(50% + 65px);
+}
+
+.intro__left-wrapper {
+  width: 100%;
+  max-width: 540px;
+}
+
+.intro__left-heading {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 48px;
+  color: $white;
+}
+
+.intro__left-text {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 445px;
+  line-height: 26px;
+  color: $white;
+}
+
